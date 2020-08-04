@@ -1,0 +1,681 @@
+//ーーーーーーーーーーーーーーーーーー
+// ヒーローバナー
+//ーーーーーーーーーーーーーーーーーー
+.hero img{
+  width: 100%;
+  margin-bottom: 40px;
+  @include mq() {
+    position: absolute;
+    top: 100px;
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// アカウント削除ボタン非活性化
+//ーーーーーーーーーーーーーーーーーー
+.btn-widthdraw:disabled{
+  cursor: not-allowed;
+  background: #98FB98;
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// サイドバー（検索）
+//ーーーーーーーーーーーーーーーーーー
+#sidebar{
+  .title{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include dq() {
+      margin-bottom: 10px;
+    }
+  }
+  .selectbox{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    .icn_select:after{
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 10px solid black;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 7px solid transparent;
+      content: "";
+    }
+  }
+  select{
+    padding: 10px;
+    width: 100%;
+    border-color: #ccc;
+    border-radius: 0;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include dq(){
+      font-size: 12px;
+    }
+  }
+  .btn-side{
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    @include dq() {
+      padding: 10px 20px;
+    }
+    @include mq() {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 検索結果
+//ーーーーーーーーーーーーーーーーーー
+.search-title{
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 5px 20px;
+  height: 40px;
+  line-height: 40px;
+  background: $color_sub;
+  @include mq(){
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 60px;
+    height: 80px;
+    line-height: 40px;
+  }
+  &-left{
+    float: left;
+    @include mq() {
+      display: flex;
+      padding-left: 5px;
+    }
+  }
+  &-right{
+    float: right;
+    @include mq(){
+      display: flex;
+      padding-right: 5px;
+    }
+  }
+  .total-num{
+    padding-right: 5px;
+    font-size: 18px;
+    @include mq() {
+      font-size: 16px;
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// ページネーション
+//ーーーーーーーーーーーーーーーーーー
+.pagination{
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+  @include mq() {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  &-list{
+    position: relative;
+    left: 50%;
+    float: left;
+    padding-left: 0;
+    list-style: none;
+  }
+  .list-item{
+    position: relative;
+    left: -50%;
+    float: left;
+    margin-right: 5px;
+    &:last-child{
+      margin-right: 0;
+    }
+    a{
+      display: block;
+      padding: 5px 10px;
+      background: #eee;
+      color: black;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      &:hover{
+        background: #333;
+        color: white;
+      }
+    }
+    &.active a{
+      background: #333;
+      color: white;
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 商品詳細（タイトル）
+//ーーーーーーーーーーーーーーーーーー
+.form-container-detail{
+  @include mq() {
+    width: 90% !important;
+  }
+  .title{
+    font-size: 28px;
+    padding-bottom: 20px;
+    @include dq() {
+      width: 90%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .badge{
+      padding: 5px 10px;
+      color: white;
+      background: #7acee6;
+      margin-right: 10px;
+      font-size: 16px;
+      vertical-align: middle;
+      position: relative;
+      @include dq(){
+        display: block;
+        width: 60px;
+        margin-bottom: 10px;
+      }
+      @include mq(){
+        display: block;
+        width: 60px;
+        margin-bottom: 10px;
+      }
+    }
+    .textname{
+      @include dq(){
+        width: 100%;
+      }
+    }
+  }
+  .text-img-container{
+    overflow: hidden;
+    margin-bottom: 40px;
+    .img-main{
+      width: 680px;
+      float: left;
+      padding-right: 100px;
+      box-sizing: border-box;
+      @include mq() {
+        width: 460px;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// お気に入りアイコン
+//ーーーーーーーーーーーーーーーーーー
+.icn-favo{
+  float: right;
+  color: #ddd;
+  padding-top: 10px;
+  padding-right: 100px;
+  @include dq(){
+    padding-top: 20px;
+    padding-right: 40px;
+  }
+  @include mq(){
+    float: right;
+    padding-right: 20px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+  &.active{
+    float: right;
+    color: #fe8a8b;
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 商品詳細（画像）
+//ーーーーーーーーーーーーーーーーーー
+.text-img-container{
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  @include dq() {
+    display: flex;
+    margin-top: 0;
+  }
+  .img-main{
+    width: 680px;
+    float: left;
+    padding-right: 100px;
+    box-sizing: border-box;
+    @include dq(){
+      width: 540px !important;
+      padding-right: 30px !important;
+      margin-left: 5%;
+    }
+  }
+  img{
+    width: 100%;
+  }
+  .img-sub{
+    width: 230px;
+    float: right;
+    background: $color_sub;
+    padding: 15px;
+    box-sizing: border-box;
+    @include dq(){
+      margin-right: 5%;
+    }
+    @include mq(){
+      width: 100%;
+      padding: 5px;
+      margin-top: 30px;
+      margin-right: 5px;
+      display: flex;
+    }
+    img{
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      @include mq(){
+        margin-bottom: 5px !important;
+        width: calc(33%);
+        margin-right: 5px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 商品詳細（説明）
+//ーーーーーーーーーーーーーーーーーー
+.author-detail{
+  background: $color_sub;
+  min-height: 50px;
+  line-height: 1.5;
+  padding: 5px 30px 20px 30px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  @include dq(){
+    width: 80%;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  @include mq(){
+    line-height: 1.5;
+  }
+  h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    @include dq(){
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    @include mq(){
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+.text-detail{
+  background: $color_sub;
+  padding: 10px 30px 30px 30px;
+  margin-top: 15px;
+  line-height: 1.5;
+  min-height: 150px;
+  margin-bottom: 40px;
+  @include dq(){
+    width: 80%;
+    margin: 20px auto;
+    min-height: 100px;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  @include mq(){
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;    
+    padding-left: 15px;
+    @include dq(){
+      font-size: 24px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    @include mq(){
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 商品詳細（購入）
+//ーーーーーーーーーーーーーーーーーー
+.text-buy{
+  overflow: hidden;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  height: 100px;
+  line-height: 100px;
+  background: $color_sub;
+  @include dq(){
+    width: 88%;
+    margin: 0 auto;
+  }
+  .item-left{
+    float: left;
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    a{
+      color: black;
+      @include mq(){
+        display: none;
+      }
+    }
+  }
+  .item-right{
+    float: right;
+    padding-right: 20px;
+    @include mq(){
+      padding-right: 40px;
+    }
+    .btn{
+      border: none;
+      font-size: 18px;
+      padding: 10px 30px;
+      &:hover{
+        cursor: pointer;
+        background: #b2d142;
+        transition: all 1s;
+        transform: translateY(-1px);
+      }
+    }
+    .price{
+      font-size: 30px;
+      margin-right: 20px;
+      @include mq(){
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 連絡掲示板（冒頭）
+//ーーーーーーーーーーーーーーーーーー
+.msg-info{
+  background: $color_sub;
+  padding: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  .avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    &-img{
+      text-align: center;
+      width: 100px;
+      float: left;
+    }
+    &-info{
+      float: left;
+      padding-left: 15px;
+      width: 360px;
+      line-height: 1.5;
+      @include dq(){
+        width: 200px;
+      }
+      @include mq(){
+        width: 200px;
+      }
+    }
+  }
+  .text-info{
+    float: left;
+    padding-left: 15px;
+    width: 405px;
+    @include mq(){
+      margin-top: 20px;
+    }
+    .left{
+      float: left;
+      padding-right: 20px;
+      line-height: 1.5;
+    }
+    .right{
+      line-height: 1.5;
+    }
+    .price{
+      display: inline-block;
+    }
+    @include dq(){
+      
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 連絡掲示板（メッセージ内）
+//ーーーーーーーーーーーーーーーーーー
+.area-bord{
+  height: 500px;
+  background: $color_sub;
+  padding: 15px;
+  overflow-y: scroll;
+  .msg-cnt{
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .avatar{
+      width: 5.2%;
+      overflow: hidden;
+      float: left;
+      @include dq(){
+        width: auto;
+      }
+      @include mq(){
+        width: auto;
+      }
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        float: left;
+      }
+    }
+    .msg-inrTxt{
+      width: 85%;
+      float: left;
+      border-radius: 5px;
+      padding: 10px;
+      margin-left: 25px;
+      position: relative;
+    }
+    &.msg-left{
+      .msg-inrTxt{
+        background: #f6e2df;
+        & > .triangle{
+          position: absolute;
+          left: -20px;
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-right: 15px solid #f6e2df;
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          @include mq(){
+            border: none;
+          }
+        }
+      }
+    }
+    &.msg-right{
+      float: right;
+      .msg-inrTxt{
+        background: #d2eaf0;
+        margin: 0 25px 0 0;
+        float: right;
+        & > .triangle{
+          position: absolute;
+          right: -20px;
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-left: 15px solid #d2eaf0;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          @include mq(){
+            border: none;
+          }
+        }
+      }
+      .avatar{
+        float: right;
+      }
+    }
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 連絡掲示板（メッセージ内）
+//ーーーーーーーーーーーーーーーーーー
+.area-send-msg{
+  background: $color_sub;
+  padding: 15px;
+  overflow: hidden;
+  textarea{
+    font-weight: 100%;
+    background: white;
+    height: 100px;
+    padding: 15px;
+  }
+  .btn-send{
+    width: 150px;
+    float: right;
+    margin-top: 0;
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// about
+//ーーーーーーーーーーーーーーーーーー
+.about-pic{
+  display: block;
+  width: 980px;
+  margin: 0 auto;
+  @include mq(){
+    width: 100%;
+  }
+}
+
+.about{
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: $color_sub;
+  @include dq(){
+    width: 80%;
+  }
+  @include mq(){
+    width: 90%;
+  }
+  &-content{
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  &-title{
+    border-left: 6px solid #b6a489;
+    padding-left: 10px;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include dq(){
+      padding-left: 5px;
+    }
+    @include mq(){
+      padding-left: 5px;      
+    }
+  }
+}
+
+.about-btn-cv{
+  margin: 15px auto;
+  &:hover{
+    cursor: pointer;
+    background: #b2d142;
+    transition: all 1s;
+    transform: translateY(-1px);
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// 上に戻るボタン
+//ーーーーーーーーーーーーーーーーーー
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: -65px;
+  background: $color_main;
+  opacity: 0.6;
+  border-radius: 50%;
+  a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    &::before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f102';
+      font-size: 25px;
+      color: #fff;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: -5px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+    }
+  }
+}

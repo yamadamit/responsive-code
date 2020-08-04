@@ -1,0 +1,69 @@
+//ーーーーーーーーーーーーーーーーーー
+// グローバルメニュー
+//ーーーーーーーーーーーーーーーーーー
+.main-index{
+  @include mq(){
+    top: 270px;
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// フォーム（画像アップロード）
+//ーーーーーーーーーーーーーーーーーー
+.form-regist-elm{
+  width: 40% !important;
+  @include mq() {
+    width: 100% !important;
+    &-select{
+      @include mq() {
+        width: 80% !important;      
+      }
+    }
+  }
+}
+
+.form__regist--textarea{
+  height: 150px !important;
+}
+
+.form__regist--price{
+  width: 150px !important;
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// フォーム（文字数カウンタ）
+//ーーーーーーーーーーーーーーーーーー
+.counter-text{
+  text-align: right;
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// フォーム（金額の単位）
+//ーーーーーーーーーーーーーーーーーー
+.form-group{
+  position: relative;
+  overflow: hidden;
+  & > input{
+    float: left;
+  }
+  & > .option{
+    position: relative;
+    top: 40px;
+    display: block;
+    float: left;
+    padding-left: 10px;
+  }
+}
+
+//ーーーーーーーーーーーーーーーーーー
+// サイドバー（トップページ）
+//ーーーーーーーーーーーーーーーーーー
+.sidebar-index{
+  @include mq(){
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 90% !important;
+    margin-left: 5%;
+    min-height: 340px !important;
+  }
+}
